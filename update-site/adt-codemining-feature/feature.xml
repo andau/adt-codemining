@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="jdt-codemining-feature"
+      id="adt-codemining-feature"
       label="%featureName"
-      version="1.0.0.qualifier"
+      version="0.0.1"
       provider-name="%featureProvider">
 
    <description>
@@ -16,19 +16,5 @@
    <license url="%licenseURL">
       %license
    </license>
-
-   <plugin
-         id="org.eclipse.jdt.codemining"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.egit.codemining"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
 </feature>

@@ -10,6 +10,7 @@
  */
 package abap.codemining.editor;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -130,11 +131,16 @@ public class AbapElementCodeMiningProvider extends AbstractCodeMiningProvider {
 			}
 		}
 		IDocument doc = textEditor.getDocumentProvider().getDocument(textEditor.getEditorInput());
-		if (textEditor.getTitle().startsWith("T")) {
+		if (textEditor.getTitle().contains("ZCL")) {
 
 			AbapClassCodeMining abapClassCodeMining = new AbapClassCodeMining();
 
-			abapClassCodeMining.evaluateCodeMinings(minings, viewer, this, doc);
+			try {
+				abapClassCodeMining.evaluateCodeMinings(minings, textEditor, viewer, this, doc);
+			} catch (URISyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }

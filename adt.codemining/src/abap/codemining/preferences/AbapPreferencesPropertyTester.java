@@ -23,12 +23,11 @@ public class AbapPreferencesPropertyTester extends PropertyTester {
 
 	@Override
 	public boolean test(Object receiver, String property, Object[] args, Object expectedValue) {
-		String preferenceName = expectedValue.toString();
-		return isEnabled(preferenceName);
+		return true; 
 	}
 
 	public static boolean isEnabled(String preferenceName) {
-		return PreferenceConstants.getPreferenceStore().getBoolean(preferenceName);
+		return true; 
 	}
 
 }
